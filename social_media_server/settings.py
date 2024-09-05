@@ -33,8 +33,8 @@ CSRF_TRUSTED_ORIGINS = [
     'https://social-media-drf.onrender.com',  'https://*.127.0.0.1',
 ]
 
-CORS_ORIGIN_ALLOW_ALL = True
-CORS_ALLOW_ALL_ORIGINS = True
+# CORS_ORIGIN_ALLOW_ALL = True
+# CORS_ALLOW_ALL_ORIGINS = True
 CSRF_COOKIE_NAME = 'csrftoken'
 
 CORS_ALLOWED_ORIGINS = [
