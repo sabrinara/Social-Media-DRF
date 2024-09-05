@@ -30,9 +30,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 CSRF_TRUSTED_ORIGINS = [
-    # 'https://social-canvas.onrender.com/', 
-    'https://*.127.0.0.1',
-    # 'https://social-canvas.onrender.com', 'https://social-canvas.onrender'
+    'https://social-media-drf.onrender.com/',  'https://*.127.0.0.1',
 ]
 
 CORS_ORIGIN_ALLOW_ALL = True
@@ -40,17 +38,15 @@ CORS_ALLOW_ALL_ORIGINS = True
 CSRF_COOKIE_NAME = 'csrftoken'
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173",  # Replace with the actual URL of your frontend
-    # "https://social-canvas.onrender.com",
-    # "https://*.127.0.0.1",
-    # "https://social-canvas-3b50e.web.app"
+    "http://localhost:5173",  
+    "https://social-media-drf.onrender.com",
+    "https://social-media-drf.netlify.app"
 ]
 
-# CORS_ALLOWED_ORIGINS = getenv('CORS_ALLOWED_ORIGINS','http://localhost:3000,http://127.0.0.1:3000,https://yoursite.com').split(',')
 
 CORS_ORIGIN_WHITELIST = (
     'http://localhost:5173',
-    # "https://social-canvas-3b50e.web.app"
+    "https://social-media-drf.netlify.app"
 )
 
 CORS_ALLOW_METHODS = [
