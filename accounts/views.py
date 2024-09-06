@@ -145,7 +145,7 @@ def activate(request, uid64, token):
         # return redirect('login')
         # Redirect to the frontend login page
         # return redirect('http://localhost:5173/login')
-        return redirect([ 'http://localhost:5173/login', 'https://social-media-drf.netlify.app/login'])
+        return redirect('http://localhost:5173/login')
     else:
         messages.error(request, "Invalid activation link.")
         return redirect('register')
