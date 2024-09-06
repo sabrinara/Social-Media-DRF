@@ -115,7 +115,7 @@ class UserRegistration(APIView):
             token = default_token_generator.make_token(user)
             uid = urlsafe_base64_encode(force_bytes(user.pk))
             # confirm_link = f'http://127.0.0.1:8000/accounts/activate/{uid}/{token}/'
-            confirm_link = f'https://{current_site.domain}/accounts/activate/{uid}/{token}/'
+            confirm_link = f'http://{current_site.domain}/accounts/activate/{uid}/{token}/'
 
             email_subject = 'Confirm your email'
             email_body = render_to_string(
@@ -144,7 +144,8 @@ def activate(request, uid64, token):
             request, "Your account has been activated. You can now log in.")
         # return redirect('login')
         # Redirect to the frontend login page
-        return redirect('https://{get_current_site(request).domain}/login')
+        # return redirect('http://localhost:5173/login')
+        return redirect([ 'http://localhost:5173/login', 'https://social-media-drf.netlify.app/login'])
     else:
         messages.error(request, "Invalid activation link.")
         return redirect('register')
