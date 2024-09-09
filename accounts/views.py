@@ -89,6 +89,7 @@ class UserDetailViewSet(viewsets.ViewSet):
     def list(self, request):
         user = self.request.user
         user_details = {
+            'id': user.id,
             'email': user.email,
             'first_name': user.first_name,
             'last_name': user.last_name,
@@ -144,8 +145,7 @@ def activate(request, uid64, token):
             request, "Your account has been activated. You can now log in.")
         # return redirect('login')
         # Redirect to the frontend login page
-        # return redirect('http://localhost:5173/login')
-        return redirect('http://localhost:5173/login')
+        return redirect('https://social-media-drf.netlify.app/login')
     else:
         messages.error(request, "Invalid activation link.")
         return redirect('register')
@@ -249,3 +249,5 @@ class UpdateUserView(generics.RetrieveUpdateAPIView):
         print('updated_serializer', updated_serializer)
 
         return Response(updated_serializer.data, status=status.HTTP_200_OK)
+    
+    

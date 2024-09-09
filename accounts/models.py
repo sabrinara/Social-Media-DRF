@@ -4,6 +4,7 @@ from .constants import GENDER_TYPE, DIVISION_TYPE
 # Create your models here.
 
 class UserDetails(models.Model):
+    id = models.AutoField(primary_key=True)
     user = models.OneToOneField(
         User, related_name='AbstractUserDetails', on_delete=models.CASCADE)
     profile_pic = models.ImageField(null=True, blank=True, upload_to='accounts/media/profile_pics/')
