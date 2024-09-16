@@ -1,5 +1,5 @@
-# NewsQuest 
-## A Django DRF Pattern Socil Media Web Application.
+# SocioLife
+## A Django DRF Pattern Social Media Web Application.
 ### Website Live: https://social-media-drf.netlify.app
 ### Serversite Link : https://social-media-drf.onrender.com
 <!---
